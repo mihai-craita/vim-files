@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/var/www/warehouse/model'
+let g:netrw_dirhist_2='/home/mihai/Programare/Ruby/blog/config'
+let g:netrw_dirhist_3='/home/mihai/public_html/newsletter4ace/html/ro'
+let g:netrw_dirhist_4='/home/mihai/public_html/eventbook/application/views/event'

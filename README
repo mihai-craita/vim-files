@@ -1,0 +1,2 @@
+for installing you will have to add a symbolic link in your home directory
+ln -s ~/.vim/vimrc ~/.vimrc
