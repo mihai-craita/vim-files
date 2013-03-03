@@ -27,7 +27,7 @@ set autoindent
 syntax enable
 set t_Co=16;
 set background=dark
-colorscheme solarized
+colorscheme elflord
 set hidden
 set ruler
 "Line numbering on
