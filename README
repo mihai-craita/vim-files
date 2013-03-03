@@ -1,2 +1,11 @@
-for installing you will have to add a symbolic link in your home directory
-ln -s ~/.vim/vimrc ~/.vimrc
+Installation:
+
+   git clone https://github.com/mihai-craita/vim-files.git
+
+Create symbolic links:
+
+   ln -s ~/.vim/vimrc ~/.vimrc
+
+Fetching vimscripts:
+
+   Call :BundleInstall in VIM
