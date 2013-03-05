@@ -14,7 +14,7 @@ Bundle 'mattn/zencoding-vim'
 " solarized theme
 Bundle 'altercation/vim-colors-solarized'
 "autocomplete using tab
-Bundle 'ervandew/supertab'
+" Bundle 'ervandew/supertab'
 " Bundle 'Valloric/YouCompleteMe' " cool script but needs a superior version
 " of vim which is not available on all Linux distros
 " match between tags using %
@@ -25,9 +25,8 @@ Bundle 'scrooloose/nerdtree'
 set autoindent
 "Set syntax on
 syntax enable
-set t_Co=16;
-set background=dark
-colorscheme elflord
+" set background=dark
+colorscheme desert
 set hidden
 set ruler
 "Line numbering on
