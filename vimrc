@@ -20,6 +20,10 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'othree/html5.vim.git'
+Bundle '2072/PHP-Indenting-for-VIm'
+Bundle 'mageekguy/php.vim'
+Bundle 'tpope/vim-fugitive'
 
 set autoindent
 " set syntax on
@@ -39,7 +43,3 @@ set foldmethod=syntax
 set showcmd
 autocmd FileType php set makeprg=php\ -l\ %
 autocmd FileType ruby set makeprg=ruby\ %
-let php_sql_query = 1  " for SQL syntax highlighting inside strings
-let php_html_in_strings = 0  " for HTML syntax highlighting inside strings
-let php_parent_error_close = 1  " for highlighting parent error ] or )
-let php_folding = 1  " for folding classes and functions
