@@ -15,15 +15,15 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'altercation/vim-colors-solarized'
 " autocomplete using tab, it needs Vim 7.3.584 with python2 support not shipped on all Linux distros
 " check this for more instructions https://github.com/Valloric/YouCompleteMe
-Bundle 'Valloric/YouCompleteMe' 
+" Bundle 'Valloric/YouCompleteMe' 
 " match between tags using %
 Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'othree/html5.vim.git'
-Bundle '2072/PHP-Indenting-for-VIm'
-Bundle 'mageekguy/php.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'spf13/PIV'
+Bundle 'ervandew/supertab'
 
 set autoindent
 " set syntax on
@@ -37,8 +37,6 @@ set nu
 set ts=4 sts=4 sw=4 expandtab
 " indent based on filetype
 filetype plugin indent on
-let g:php_folding=2
-set foldmethod=syntax
 "show available commands
 set showcmd
 autocmd FileType php set makeprg=php\ -l\ %
