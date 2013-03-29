@@ -24,6 +24,18 @@ Bundle 'othree/html5.vim.git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'spf13/PIV'
 Bundle 'ervandew/supertab'
+Bundle 'kien/ctrlp.vim'
+
+" NO MORE ARROW KEYS
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+" END - NO MORE ARROW KEYS
 
 set autoindent
 " set syntax on
