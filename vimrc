@@ -25,6 +25,14 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'spf13/PIV'
 Bundle 'ervandew/supertab'
 Bundle 'kien/ctrlp.vim'
+" Bundle 'fholgado/minibufexpl.vim'
+Bundle 'scrooloose/syntastic'
+" syntastic settings
+let g:syntastic_php_checkers = ['php']
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'active_filetypes': ['php'],
+            \ 'passive_filetypes': [''] }
+let g:syntastic_auto_jump=1
 
 " NO MORE ARROW KEYS
 inoremap  <Up>     <NOP>
