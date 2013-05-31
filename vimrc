@@ -16,7 +16,7 @@ if exists("*vundle#rc")     " Call Vundle plugin if it is installed
     Bundle 'altercation/vim-colors-solarized'
     " autocomplete using tab, it needs Vim 7.3.584 with python2 support not shipped on all Linux distros
     " check this for more instructions https://github.com/Valloric/YouCompleteMe
-    " Bundle 'Valloric/YouCompleteMe' 
+    Bundle 'Valloric/YouCompleteMe' 
     " match between tags using %
     Bundle 'tsaleh/vim-matchit'
     Bundle 'vim-scripts/taglist.vim'
@@ -24,7 +24,7 @@ if exists("*vundle#rc")     " Call Vundle plugin if it is installed
     Bundle 'othree/html5.vim.git'
     Bundle 'tpope/vim-fugitive'
     Bundle 'spf13/PIV'
-    Bundle 'ervandew/supertab'
+    " Bundle 'ervandew/supertab'
     Bundle 'kien/ctrlp.vim'
     " Bundle 'fholgado/minibufexpl.vim'
     Bundle 'scrooloose/syntastic'

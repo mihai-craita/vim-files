@@ -1,3 +1,10 @@
+VIM is an advanced text editor for UNIX systems.
+You can get a Debian package of VIM compiled with support for scripting with Lua, Perl, Python, Ruby, and Tcl but no GUI from: 
+
+    http://packages.debian.org/testing/vim-nox
+
+This repo contains my personal runtime configuration.
+
 Installation:
 
    git clone https://github.com/mihai-craita/vim-files.git ~/.vim
