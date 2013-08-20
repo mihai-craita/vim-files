@@ -23,7 +23,6 @@ if exists("*vundle#rc")     " Call Vundle plugin if it is installed
     Bundle 'scrooloose/nerdtree'
     Bundle 'othree/html5.vim.git'
     Bundle 'tpope/vim-fugitive'
-    Bundle 'spf13/PIV'
     " Bundle 'ervandew/supertab'
     Bundle 'kien/ctrlp.vim'
     " Bundle 'fholgado/minibufexpl.vim'
@@ -61,5 +60,6 @@ set nu
 set ts=4 sts=4 sw=4 expandtab
 filetype plugin indent on   " Indent based on filetype
 set showcmd                 " Show (partial) command available in status line
+set pastetoggle=<F2>        " F2 toggles paste mode
 autocmd FileType php set makeprg=php\ -l\ %
 autocmd FileType ruby set makeprg=ruby\ %
