@@ -22,6 +22,7 @@ if exists("*vundle#rc")     " Call Vundle plugin if it is installed
     Bundle 'vim-scripts/taglist.vim'
     Bundle 'scrooloose/nerdtree'
     Bundle 'othree/html5.vim.git'
+    Bundle 'jiangmiao/simple-javascript-indenter'
     Bundle 'tpope/vim-fugitive'
     " Bundle 'ervandew/supertab'
     Bundle 'kien/ctrlp.vim'
