@@ -3,7 +3,7 @@ set nocompatible " Improved VIM
 " Vundle plugin - the plug-in manager for VIM 
 filetype off                " Required by Vundle plugin, changed later
 set rtp+=~/.vim/bundle/vundle/
-if exists("*vundle#rc")     " Call Vundle plugin if it is installed
+" if exists("*vundle#rc")     " Call Vundle plugin if it is installed
     call vundle#rc()
 
     " let Vundle manage Vundle
@@ -34,7 +34,7 @@ if exists("*vundle#rc")     " Call Vundle plugin if it is installed
                 \ 'active_filetypes': ['php'],
                 \ 'passive_filetypes': [''] }
     let g:syntastic_auto_jump=1
-endif
+" endif
 
 " NO MORE ARROW KEYS
 inoremap  <Up>     <NOP>
@@ -50,7 +50,9 @@ noremap   <Right>  <NOP>
 set autoindent              " Simple indent copy the indentation from the previous line
 syntax enable               " Enable syntax
 set background=dark
-colorscheme desert
+let g:solarized_termcolors=16
+let g:solarized_contrast="normal"
+colorscheme solarized
 set showmatch		        " Show matching brackets.
 set ignorecase		        " Do case insensitive matching
 set smartcase		        " Do smart case matching
