@@ -17,16 +17,11 @@ set rtp+=~/.vim/bundle/vundle/
     " autocomplete using tab, it needs Vim 7.3.584 with python2 support not shipped on all Linux distros
     " check this for more instructions https://github.com/Valloric/YouCompleteMe
     Bundle 'Valloric/YouCompleteMe' 
-    " match between tags using %
-    Bundle 'tsaleh/vim-matchit'
-    Bundle 'vim-scripts/taglist.vim'
     Bundle 'scrooloose/nerdtree'
     Bundle 'othree/html5.vim.git'
-    Bundle 'jiangmiao/simple-javascript-indenter'
+    Bundle 'pangloss/vim-javascript'
     Bundle 'tpope/vim-fugitive'
-    " Bundle 'ervandew/supertab'
     Bundle 'kien/ctrlp.vim'
-    " Bundle 'fholgado/minibufexpl.vim'
     Bundle 'scrooloose/syntastic'
     " syntastic settings
     let g:syntastic_php_checkers = ['php']
@@ -47,11 +42,11 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 " END - NO MORE ARROW KEYS
 
-set autoindent              " Simple indent copy the indentation from the previous line
+set noswapfile              " no swap files
 syntax enable               " Enable syntax
 set background=dark
-let g:solarized_termcolors=16
-let g:solarized_contrast="normal"
+" let g:solarized_termcolors=16
+" let g:solarized_contrast="normal"
 colorscheme solarized
 set showmatch		        " Show matching brackets.
 set ignorecase		        " Do case insensitive matching
