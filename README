@@ -8,12 +8,9 @@ This repo contains my personal runtime configuration.
 Installation:
 
    git clone https://github.com/mihai-craita/vim-files.git ~/.vim
-   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+   curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+   sh ./installer.sh ~/.vim/
 
 Create symbolic links:
 
    ln -s ~/.vim/vimrc ~/.vimrc
-
-Fetching vimscripts:
-
-   Call :BundleInstall in VIM

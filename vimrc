@@ -40,37 +40,6 @@ let g:syntastic_filetype_map = { "blade.php": "php" }
 let g:syntastic_mode_map = { "mode": "active", "active_filetypes": ["php"], "passive_filetypes": ["html"] }
 let g:syntastic_auto_jump=1
 
-" NeoComplCache ------------------------------
-"
-" most of them not documented because I'm not sure how they work
-" (docs aren't good, had to do a lot of trial and error to make 
-" it play nice)
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_ignore_case = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_auto_select = 1
-let g:neocomplcache_enable_fuzzy_completion = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_fuzzy_completion_start_length = 1
-let g:neocomplcache_auto_completion_start_length = 1
-let g:neocomplcache_manual_completion_start_length = 1
-let g:neocomplcache_min_keyword_length = 1
-let g:neocomplcache_min_syntax_length = 1
-" complete with workds from any opened file
-let g:neocomplcache_same_filetype_lists = {}
-let g:neocomplcache_same_filetype_lists._ = '_'
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-" Enable heavy omni completion.
-if !exists('g:neocomplcache_force_omni_patterns')
-   let g:neocomplcache_force_omni_patterns = {}
-endif
-let g:neocomplcache_force_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-
 " NO MORE ARROW KEYS
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -112,14 +81,20 @@ set smartcase		        " Do smart case matching
 set incsearch		        " Incremental search
 set hidden                  " Hide buffers when they are abandoned
 
-set ts=4 sw=4
+set tabstop=4 
+set shiftwidth=4
 set smarttab
-set autoindent
-set noexpandtab
+set autoindent              " Copy indent from current line when starting a new line
+set cindent                 " Get the amount of indent for line ccording the C indenting rules
+set expandtab				" on tab press insert spaces
 set showcmd                 " Show (partial) command available in status line
 set pastetoggle=<F2>        " F2 toggles paste mode
 set visualbell           	" don't beep
 set noerrorbells         	" don't beep
+set textwidth=80           " longer lines will be broken
+" set colorcolumn=+1         " limit line
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn="80,".join(range(120,999),",")
 
 " Airline ------------------------------
 let g:airline_powerline_fonts = 0
@@ -131,7 +106,5 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(jpg|jpeg|png|gif|svg)$',
   \ }
 
-" open blade files as html, using syntax, ident and this will also match between html tags
-autocmd BufReadPost *.blade.php set filetype=html
-
 " autocmd VimEnter * NERDTree
+let g:NERDTreeWinPos = "right" " nerd tree open to the right
