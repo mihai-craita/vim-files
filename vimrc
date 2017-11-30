@@ -2,30 +2,25 @@ if &compatible
     set nocompatible
 endif
 
-" Required:
-set runtimepath^=~/.vim/repos/github.com/Shougo/dein.vim
+" Try to load minpac.
+silent! packadd minpac
 
-if dein#load_state(expand('~/.vim/'))
-    call dein#begin(expand('~/.vim/'))
+if exists('*minpac#init')
+    call minpac#init()
 
-    " Let dein manage dein
-    call dein#add('Shougo/dein.vim')
+    call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-    " Add or remove your plugins here:
-    call dein#add('Shougo/neocomplete.vim')
-    call dein#add('tpope/vim-commentary')
-    call dein#add('tpope/vim-fugitive')
-    call dein#add('kien/ctrlp.vim')
-    call dein#add('airblade/vim-gitgutter')
-    call dein#add('vim-airline/vim-airline')
-    call dein#add('vim-airline/vim-airline-themes')
-    call dein#add('scrooloose/syntastic')
-    call dein#add('sheerun/vim-polyglot')
-    call dein#add('vim-scripts/matchit.zip')
-    call dein#add('scrooloose/nerdtree')
-
-    call dein#end()
-    call dein#save_state()
+    call minpac#add('Shougo/neocomplete.vim')
+    call minpac#add('tpope/vim-commentary')
+    call minpac#add('tpope/vim-fugitive')
+    call minpac#add('kien/ctrlp.vim')
+    call minpac#add('airblade/vim-gitgutter')
+    call minpac#add('vim-airline/vim-airline')
+    call minpac#add('vim-airline/vim-airline-themes')
+    call minpac#add('scrooloose/syntastic')
+    call minpac#add('sheerun/vim-polyglot')
+    call minpac#add('vim-scripts/matchit.zip')
+    call minpac#add('scrooloose/nerdtree')
 endif
 
 filetype plugin indent on
@@ -94,7 +89,7 @@ let g:airline#extensions#whitespace#enabled = 0
 
 " CTRLP plugin --------------------------------
 let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/](\.git|vendor|\.svn|node_modules)$',
+            \ 'dir':  '\v[\/](\.git|vendor|\.svn|node_modules|public\/js\/libs)$',
             \ 'file': '\v\.(jpg|jpeg|png|gif|svg)$',
             \ }
 
