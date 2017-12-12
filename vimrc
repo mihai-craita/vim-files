@@ -17,24 +17,25 @@ if exists('*minpac#init')
     call minpac#add('airblade/vim-gitgutter')
     call minpac#add('vim-airline/vim-airline')
     call minpac#add('vim-airline/vim-airline-themes')
-    call minpac#add('scrooloose/syntastic')
+    " call minpac#add('scrooloose/syntastic')
+    call minpac#add('w0rp/ale')
     call minpac#add('sheerun/vim-polyglot')
-    call minpac#add('vim-scripts/matchit.zip')
+    " call minpac#add('vim-scripts/matchit.zip')
     call minpac#add('scrooloose/nerdtree')
 endif
 
 filetype plugin indent on
 
-" syntastic settings
-let g:syntastic_php_checkers = ['php']
-let g:syntastic_filetype_map = { "blade.php": "php" }
-let g:syntastic_mode_map = { "mode": "active", "active_filetypes": ["php"], "passive_filetypes": ["html"] }
-let g:syntastic_auto_jump=1
+"ale settings
+let g:ale_lint_on_text_changed = 'never'
 
 " remap jj to esc in insert mode
 inoremap jj <esc>
 " remap jj to ctrl+c (esc) in command mode
 cnoremap jj <c-c>
+
+" --- matchit ---
+runtime macros/matchit.vim          " enable matchit (better '%' key mapping)
 
 " remove highlighted text when escape is pressed
 nnoremap <silent> <CR> :nohlsearch<cr><cr>
@@ -65,7 +66,6 @@ set cindent                 " Get the amount of indent for line ccording the C i
 set expandtab				" on tab press insert spaces
 set showcmd                 " Show (partial) command available in status line
 set pastetoggle=<F2>        " F2 toggles paste mode
-set visualbell           	" don't beep
 
 " neocomplete plugin --------------------------
 " Disable AutoComplPop.
@@ -84,7 +84,7 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 " Airline plugin ------------------------------
 let g:airline_powerline_fonts = 0
-let g:airline_theme = 'base16_bright'
+let g:airline_theme='murmur'
 let g:airline#extensions#whitespace#enabled = 0
 
 " CTRLP plugin --------------------------------
